@@ -140,7 +140,7 @@ body {
     padding-bottom: 3px;
     background-color: var(--white);
     transition: all .5s ease-in-out;
-    box-shadow: 0 7px 5px 0 rgba(0, 0, 0, .2);
+    /* box-shadow: 0 7px 5px 0 rgba(0, 0, 0, .2); */
 }
 
 .nav-button {
@@ -151,4 +151,37 @@ body {
     padding: .7rem 1.5rem;
     border-radius: 30px;
     background-image: linear-gradient(90deg, var(--green-clr), var(--cyan-clr));
+}
+
+.nav-button:hover {
+    position: relative;
+    right: 1px;
+    bottom: 1px;
+}
+
+.navlist a {
+    color: var(--grayish-blue);
+    font-size: .8rem;
+    margin-right: 1rem;
+    position: relative;
+    transition: .3s;
+}
+
+.navlist a:hover {
+    color: black;
+}
+
+.navlist a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: var(--green-clr);
+    height: 3px;
+    width: 0%;
+    transition: .3s;
+}
+
+.navlist a:hover::after {
+    width: 100%;
 }
