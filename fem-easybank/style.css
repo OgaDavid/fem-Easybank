@@ -59,6 +59,7 @@ ol[role='list'] {
 
 /* Set core root defaults */
 
+html,
 html:focus-within {
     scroll-behavior: smooth;
 }
@@ -130,39 +131,50 @@ body {
     background-color: var(--light-grey);
 }
 
+section {
+    margin-left: 120px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 
 /* Navigation styling starts here */
 
 .navbar {
     display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 1111111;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 3px;
     background-color: var(--white);
-    transition: all .5s ease-in-out;
-    /* box-shadow: 0 7px 5px 0 rgba(0, 0, 0, .2); */
+    transition: all .2s ease-in-out;
 }
 
-.nav-button {
+.nav-button,
+.home-btn {
     border: none;
     font-size: .7rem;
     font-weight: 700;
     color: var(--white);
-    padding: .7rem 1.5rem;
+    padding: .6rem 1.5rem;
     border-radius: 30px;
-    background-image: linear-gradient(90deg, var(--green-clr), var(--cyan-clr));
+    background-image: linear-gradient(90deg, var(--green-clr) -20%, var(--cyan-clr));
+    transition: background-image .1s;
 }
 
-.nav-button:hover {
-    position: relative;
-    right: 1px;
-    bottom: 1px;
+.nav-button:hover,
+.nav-button:focus {
+    background-image: linear-gradient(var(--green-clr), var(--green-clr));
 }
 
 .navlist a {
     color: var(--grayish-blue);
     font-size: .8rem;
-    margin-right: 1rem;
+    margin-right: 1.3rem;
     position: relative;
     transition: .3s;
 }
@@ -185,3 +197,62 @@ body {
 .navlist a:hover::after {
     width: 100%;
 }
+
+
+/* Navigation styling ends here */
+
+
+/* Body styling starts here */
+
+.home-right img {
+    position: absolute;
+    right: -100px;
+    top: -50px;
+    z-index: -1;
+}
+
+.home-left {
+    padding-top: 180px;
+}
+
+.box-shadow {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.phone-background {
+    width: 60%;
+}
+
+.phone-mockup {
+    width: 50%;
+}
+
+.home-left h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--dark-blue-clr);
+    width: 500px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.home-left p {
+    width: 350px;
+    font-size: .8rem;
+    color: var(--grayish-blue);
+}
+
+.home-btn {
+    margin-top: 30px;
+}
+
+.home-btn:hover,
+.home-btn:focus {
+    background-image: linear-gradient(var(--green-clr), var(--green-clr));
+}
+
+
+/* Body styling ends here */
+
+
+/* Main styling ends here */

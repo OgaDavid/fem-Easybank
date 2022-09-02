@@ -12,31 +12,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
-<!-- Navigation  -->
-<nav>
-    <div class="navbar">
-        <div>
-            <a href="#"><img src="images/logo.svg" alt="logo" aria-label="logo"></a>
-        </div>
-        <div class="navlist">
-            <ul>
-                <l1><a href="#">Home</a></l1>
-                <l1><a href="#">About</a></l1>
-                <l1><a href="#">Contact</a></l1>
-                <l1><a href="#">Blog</a></l1>
-                <l1><a href="#">Careers</a></l1>
-            </ul>
-        </div>
-        <div>
-            <a href="#" class="nav-button">Request Invite</a>
-        </div>
-    </div>
-</nav>
-
-
-
 <body>
+    <!-- Navigation  -->
+    <nav id="nav">
+        <div class="navbar" id="navbar">
+            <div>
+                <a href="#"><img src="images/logo.svg" alt="logo" aria-label="logo"></a>
+            </div>
+            <div class="navlist">
+                <ul>
+                    <l1><a href="#" class="active">Home</a></l1>
+                    <l1><a href="#">About</a></l1>
+                    <l1><a href="#">Contact</a></l1>
+                    <l1><a href="#">Blog</a></l1>
+                    <l1><a href="#">Careers</a></l1>
+                </ul>
+            </div>
+            <div>
+                <button class="nav-button">Request Invite</button>
+            </div>
+        </div>
+    </nav>
 
+    <main>
+
+        <section id="home">
+            <div class="home-left">
+                <h1>Next generation digital banking</h1>
+                <p>Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+                <button class="home-btn" href="#">Request Invite</button class="home-btn">
+            </div>
+            <div class="home-right">
+                <img class="phone-background" src="images/bg-intro-desktop.svg" alt="">
+                <img class="phone-mockup" src="images/image-mockups.png" alt="">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
