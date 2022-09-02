@@ -17,7 +17,7 @@
 }
 
 
-/* Andy bell css reset  */
+/* Andy bell css reset here  */
 
 
 /* Box sizing rules */
@@ -42,6 +42,10 @@ blockquote,
 dl,
 dd {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -112,12 +116,39 @@ select {
 }
 
 
+/* Andy bell css reset ends  */
+
+
 /* Main styling starts here */
+
+body,
+html {
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: var(--light-grey);
+}
 
 
 /* Navigation styling starts here */
 
 .navbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3px;
+    background-color: var(--white);
+    transition: all .5s ease-in-out;
+    box-shadow: 0 7px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.nav-button {
+    border: none;
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--white);
+    padding: .7rem 1.5rem;
+    border-radius: 30px;
+    background-image: linear-gradient(90deg, var(--green-clr), var(--cyan-clr));
 }
