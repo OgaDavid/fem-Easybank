@@ -170,7 +170,7 @@ button:hover {
 
 .nav-button:hover,
 .nav-button:focus {
-    background-color: var(--cyan-clr);
+    background-color: hsl(136, 100%, 50%);
 }
 
 .navlist a {
@@ -253,7 +253,7 @@ button:hover {
 
 .home-btn:hover,
 .home-btn:focus {
-    background-color: var(--cyan-clr);
+    background-color: hsl(136, 100%, 50%);
 }
 
 
@@ -263,7 +263,7 @@ button:hover {
 /* About us styling starts here */
 
 #about-us {
-    background-color: var(--light-grayish-blue);
+    background-color: var(--light-grey);
     margin-left: 0;
     margin-top: 150px;
     z-index: -1;
@@ -279,6 +279,17 @@ button:hover {
     color: var(--dark-blue-clr);
     font-size: 3rem;
     padding-bottom: 1rem;
+    position: relative;
+}
+
+.about-us h2::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 7.5rem;
+    width: 100%;
+    background-color: var(--green-clr);
 }
 
 .about-us h3 {
@@ -344,14 +355,24 @@ button:hover {
 /* Blog section sytling starts */
 
 #blog {
-    margin-top: 7rem;
+    padding-top: 7rem;
 }
 
 .blog h1 {
     font-size: 3.5rem;
     font-weight: 300;
     color: var(--dark-blue-clr);
-    margin-bottom: 2rem;
+    position: relative;
+}
+
+.blog h1::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    left: -8rem;
+    bottom: 11.5rem;
+    width: 130%;
+    background-color: var(--green-clr);
 }
 
 .blog-card-image-one,
@@ -384,6 +405,7 @@ button:hover {
 .blog-container {
     gap: 1.5rem;
     margin-left: 0;
+    margin-top: 4rem;
 }
 
 .blog-card {
@@ -408,7 +430,7 @@ button:hover {
 
 .blog-card h3 a {
     color: var(--dark-blue-clr);
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .blog-card h3 a:hover,
@@ -442,22 +464,43 @@ button:hover {
     font-size: 3rem;
     font-weight: 300;
     color: var(--dark-blue-clr);
-    padding-top: 3rem;
-    margin-bottom: 3rem;
+    padding-top: 7rem;
+    position: relative;
+}
+
+.contact-us p {
+    margin-bottom: 6rem;
+}
+
+.contact-us h1::after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    left: -8rem;
+    bottom: 11.5rem;
+    width: 130%;
+    background-color: var(--green-clr);
 }
 
 .contact-flex {
     display: flex;
+    border-radius: 50px;
+    background-color: var(--light-grey);
+    border-radius: 40px;
+    margin-right: 4rem;
+    margin-left: 4rem;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, .2);
 }
 
 .contact-right img {
     width: 80%;
-    margin-top: 4rem;
+    margin-top: 12rem;
+    margin-right: 0;
 }
 
 .user-details {
-    background-color: var(--white);
-    border-radius: 10px;
+    margin-top: 6rem;
+    margin-right: 5rem;
 }
 
 .details,
@@ -472,7 +515,7 @@ textarea {
 input[type=text],
 input[type=email] {
     border: none;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 1rem;
     background-color: var(--light-grayish-blue);
     width: 400px;
@@ -481,15 +524,107 @@ input[type=email] {
     margin-right: 3rem;
 }
 
+input[type=submit] {
+    padding: 1rem;
+    width: 90%;
+    background-color: var(--green-clr);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    margin-left: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background-color: hsl(136, 100%, 50%);
+}
+
 textarea {
     border: none;
     background-color: var(--light-grayish-blue);
     border-radius: 10px;
     margin-top: 1rem;
+    padding: 1rem;
+    resize: none;
 }
 
 
 /* contact us styling ends */
+
+
+/* Footer styling starts here */
+
+#footer {
+    background-color: var(--dark-blue-clr);
+    margin-top: 5rem;
+}
+
+
+/* footer styling ends here */
+
+.footer {
+    display: grid;
+    content: '';
+    grid-template-columns: 1fr 1fr 2fr;
+    padding-bottom: 3rem;
+    padding-top: 4rem;
+    place-items: center;
+    justify-content: center;
+}
+
+.social-links img {
+    display: inline-block;
+    margin-top: 3rem;
+    padding-right: 5px;
+}
+
+.social-links img:hover,
+.social-links img:focus {
+    position: relative;
+    bottom: 3px;
+}
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav-left {
+    margin-right: 8rem;
+}
+
+.footer-grid-one img {
+    cursor: pointer;
+}
+
+.footer-grid-two {
+    margin-left: 2rem;
+}
+
+.footer-grid-two a {
+    color: var(--light-grey);
+    font-size: .8rem;
+    transition: .4s;
+}
+
+.footer-grid-two a:hover,
+.footer-grid-two a:focus {
+    color: var(--green-clr);
+}
+
+.footer-grid-three p {
+    color: var(--grayish-blue);
+    font-size: .8rem;
+}
+
+.footer-grid-three {
+    text-align: end;
+    margin-left: 8rem;
+}
+
+.footer-button {
+    margin-bottom: 1.5rem;
+}
 
 
 /* Body styling ends here */
