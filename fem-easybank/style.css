@@ -130,6 +130,7 @@ html {
 
 body {
     background-color: var(--light-grey);
+    overflow-x: hidden;
 }
 
 section {
@@ -163,13 +164,13 @@ button:hover {
     color: var(--white);
     padding: .6rem 1.5rem;
     border-radius: 30px;
-    background-image: linear-gradient(90deg, var(--green-clr) -20%, var(--cyan-clr));
-    transition: background-image .1s;
+    background-color: var(--green-clr);
+    transition: all .3s ease-in-out;
 }
 
 .nav-button:hover,
 .nav-button:focus {
-    background-image: linear-gradient(var(--green-clr), var(--green-clr));
+    background-color: var(--cyan-clr);
 }
 
 .navlist a {
@@ -252,7 +253,7 @@ button:hover {
 
 .home-btn:hover,
 .home-btn:focus {
-    background-image: linear-gradient(var(--green-clr), var(--green-clr));
+    background-color: var(--cyan-clr);
 }
 
 
@@ -264,8 +265,10 @@ button:hover {
 #about-us {
     background-color: var(--light-grayish-blue);
     margin-left: 0;
-    margin-top: 200px;
+    margin-top: 150px;
     z-index: -1;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .about-us h2 {
@@ -275,6 +278,7 @@ button:hover {
     font-weight: 300;
     color: var(--dark-blue-clr);
     font-size: 3rem;
+    padding-bottom: 1rem;
 }
 
 .about-us h3 {
@@ -291,7 +295,6 @@ button:hover {
 }
 
 .about-us .about-paragraph {
-    width: 500px;
     text-align: center;
     font-size: .9rem;
     margin-bottom: 5rem;
@@ -302,7 +305,7 @@ button:hover {
     content: '';
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 3rem;
     margin-left: 4rem;
     margin-right: 4rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -312,6 +315,7 @@ button:hover {
     text-align: center;
     border-radius: 10px;
     transition: all .5s ease-in-out;
+    margin-bottom: 6rem;
 }
 
 .about-card:hover,
@@ -322,7 +326,9 @@ button:hover {
 }
 
 .card-paragraph {
-    padding-bottom: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .about-card img {
@@ -333,6 +339,46 @@ button:hover {
 
 
 /* About us styling ends here */
+
+
+/* Blog section sytling starts */
+
+#blog {
+    margin-top: 7rem;
+}
+
+.blog h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--dark-blue-clr);
+    margin-bottom: 2rem;
+}
+
+.blog-card-image-one {
+    background: url(../fem-easybank/images/image-currency.jpg);
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 2rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.blog-container {
+    gap: 1.5rem;
+    margin-left: 0;
+}
+
+.blog-card {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+}
+
+.blog-card em {
+    font-size: .7rem;
+}
+
+
+/* Blog secion styling ends */
 
 
 /* Body styling ends here */
