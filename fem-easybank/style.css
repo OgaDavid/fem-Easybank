@@ -126,11 +126,11 @@ select {
 body,
 html {
     font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 body {
     background-color: var(--light-grey);
-    overflow-x: hidden;
 }
 
 section {
@@ -324,7 +324,7 @@ button:hover {
 
 .about-card {
     text-align: center;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: all .5s ease-in-out;
     margin-bottom: 6rem;
 }
@@ -332,7 +332,7 @@ button:hover {
 .about-card:hover,
 .about-card:focus {
     background-color: var(--white);
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0px 5px 30px 0 rgba(0, 0, 0, .2);
     transform: scale(1.1);
 }
 
@@ -406,6 +406,7 @@ button:hover {
     gap: 1.5rem;
     margin-left: 0;
     margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .blog-card {
@@ -441,7 +442,7 @@ button:hover {
 .blog-card p {
     font-size: .7rem;
     color: var(--grayish-blue);
-    padding-right: 4rem;
+    padding-right: 3rem;
     padding-bottom: 2.5rem;
 }
 
@@ -461,7 +462,7 @@ button:hover {
 }
 
 .contact-us h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 300;
     color: var(--dark-blue-clr);
     padding-top: 7rem;
@@ -470,6 +471,8 @@ button:hover {
 
 .contact-us p {
     margin-bottom: 6rem;
+    color: var(--green-clr);
+    font-weight: 400;
 }
 
 .contact-us h1::after {
@@ -631,3 +634,63 @@ textarea {
 
 
 /* Main styling ends here */
+
+
+/* Media queries start here */
+
+@media(max-width: 1190px) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer-grid-three {
+        margin-left: 5rem;
+    }
+}
+
+@media(max-width: 1024px) {
+    section {
+        margin-left: 50px;
+    }
+    .phone-background {
+        width: 65%;
+    }
+    .phone-mockup {
+        width: 60%;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 8rem;
+        row-gap: 2rem;
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+    .home-left h1 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 900px) {
+    #about-us {
+        margin-top: 30px;
+    }
+    .blog-container {
+        margin-left: 3.3rem;
+    }
+    .footer-grid-three {
+        margin-top: 2rem;
+        margin-left: 9rem;
+        text-align: start;
+    }
+    .footer-grid-three button {
+        float: left;
+    }
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-grid-three p {
+        display: inline-block;
+    }
+}
+
+
+/* Media queries end here */
