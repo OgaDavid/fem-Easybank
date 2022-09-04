@@ -14,9 +14,9 @@ if (window.matchMedia("(max-width: 1190px)").matches) {
     contactImage.style.display = "none";
 }
 
-// if (window.matchMedia("(max-width: 720px)").matches) {
-//     const phoneBackground = document.querySelector(".phone-background");
+if (window.matchMedia("(max-width: 425px)").matches) {
+    const phoneBackground = document.querySelector(".phone-background");
 
-//     phoneBackground.setAttribute("src", "images/bg-intro-mobile.svg")
+    phoneBackground.setAttribute("src", "images/bg-intro-mobile.svg")
 
-// }
+}
