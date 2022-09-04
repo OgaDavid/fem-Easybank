@@ -13,3 +13,10 @@ if (window.matchMedia("(max-width: 1190px)").matches) {
     const contactImage = document.querySelector(".contact-right img");
     contactImage.style.display = "none";
 }
+
+// if (window.matchMedia("(max-width: 720px)").matches) {
+//     const phoneBackground = document.querySelector(".phone-background");
+
+//     phoneBackground.setAttribute("src", "images/bg-intro-mobile.svg")
+
+// }
