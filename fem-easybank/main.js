@@ -1,7 +1,6 @@
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
     navbar.classList.toggle("box-shadow", window.scrollY > 0);
-    console.log("scroll");
 })
 
 const homeText = document.querySelector(".home-left h1");
@@ -19,4 +18,27 @@ if (window.matchMedia("(max-width: 425px)").matches) {
 
     phoneBackground.setAttribute("src", "images/bg-intro-mobile.svg")
 
+}
+
+if (window.matchMedia("(max-width: 635px)").matches) {
+    const menu = document.querySelector(".menu-btn");
+    const close = document.querySelector(".close-btn");
+    const mobileNav = document.querySelector(".navlist ul");
+    const navLinks = document.querySelectorAll(".nav-link");
+    menu.addEventListener("click", () => {
+        menu.style.display = "none"
+        close.style.display = "block";
+        mobileNav.style.top = "3rem";
+    })
+    close.addEventListener("click", () => {
+        menu.style.display = "block"
+        mobileNav.style.top = "-15rem";
+        close.style.display = "none";
+    })
+
+    navLinks.addEventListener("click", () => {
+        mobileNav.style.top = "-15rem";
+        close.style.display = "none";
+        menu.style.display = "block"
+    })
 }
